@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
+import { State } from 'src/app/shared/enums/state.enum';
 import { Prestation } from 'src/app/shared/models/prestation.model';
 import { fakePrestation } from './fake-prestations';
-import { initDomAdapter } from '@angular/platform-browser/src/browser';
-import { State } from 'src/app/shared/enums/state.enum';
 
 @Injectable({
   providedIn: 'root'

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PrestationService } from '../../services/prestation.service';
 import { Prestation } from 'src/app/shared/models/prestation.model';
-import { JsonPipe } from '@angular/common';
+
 
 @Component({
   selector: 'app-list-prestations',
@@ -12,6 +12,7 @@ export class ListPrestationsComponent implements OnInit {
 
   public collection: Prestation[];
   public headers: string[];
+  public texte = 'Ajouter une prestation';
 
 
   constructor(

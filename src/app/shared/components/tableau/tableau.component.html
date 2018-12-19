@@ -1,5 +1,5 @@
 <div class="table-responsive">
-    <table class="table table-hover">
+    <table class="table table-hover" id="tab"> <!-- on ajoute un id car on a désactivé le shadow DOM à cause du ng-content -> permet d'alourdir le poid du css spécifique du composant-->
       <thead>
         <tr>
           <th *ngFor="let header of headers" scope="col">{{ header }}</th>
