@@ -1,0 +1,10 @@
+@import '~src/variables';
+
+div{
+  background: $palette-color-two;
+  padding: 2 rem;
+  h1 {
+    color: $light-color;
+    margin: 0;
+  }
+}

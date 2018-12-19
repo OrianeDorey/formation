@@ -5,9 +5,11 @@ import { PageClientsComponent } from './pages/page-clients/page-clients.componen
 import { ItemClientComponent } from './components/item-client/item-client.component';
 import { ListClientComponent } from './components/list-client/list-client.component';
 import { SharedModule } from '../shared/shared.module';
+import { PageAddClientComponent } from './pages/page-add-client/page-add-client.component';
+import { AddClientComponent } from './containers/add-client/add-client.component';
 
 @NgModule({
-  declarations: [PageClientsComponent, ItemClientComponent, ListClientComponent],
+  declarations: [PageClientsComponent, ItemClientComponent, ListClientComponent, PageAddClientComponent, AddClientComponent],
   imports: [
     CommonModule, ClientsRoutingModule, SharedModule
   ]
