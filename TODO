@@ -4,3 +4,8 @@ Todo:
   ✔ Create ClientModule @started(18-12-17 14:36) @done(18-12-17 14:36) @lasted(11s)
   ✔ Create SharedModule @started(18-12-17 14:36) @done(18-12-17 14:36) @lasted(13s)
   ✔ Create UiModule @started(18-12-17 14:36) @done(18-12-17 14:36) @lasted(15s)
+
+  ✔ LoginRoutingModule @started(18-12-18 11:25) @done(18-12-18 11:31) @lasted(6m15s)
+  ✔ ClientsRoutingModule @done(18-12-18 11:35)
+  ✔ PageNotFoundRoutingModule pour la route ** @started(18-12-18 11:31) @done(18-12-18 11:31) @lasted(21s)
+

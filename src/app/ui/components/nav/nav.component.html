@@ -1,17 +1,18 @@
 <nav>
     <ul class="nav flex-column">
       <li>
-        <a href="">
+        <a routerLink="/login" routerLinkActive="active"> <!-- si on veut binder avec du code js [router-link]-->
+          <!-- si on tape /login on a une URL totalement réécrite ex : http://localhost:30000/login si on tape login on ajoute login à la fin de l'URL ex : http://localhost:30000/ex/login-->
           Login
         </a>
       </li>
       <li>
-        <a href="">
+        <a routerLink="/prestations" routerLinkActive="active">
           Prestations
         </a>
       </li>
       <li>
-        <a href="">
+        <a routerLink="/clients" routerLinkActive="active">
           Clients
         </a>
       </li>

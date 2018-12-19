@@ -1,0 +1,4 @@
+<app-tableau [headers]="headers">
+    <app-item-prestation *ngFor="let data of collection"  [item]="data"></app-item-prestation> <!-- [item] propterty binding avec autre chose qu'un string. Correspond au champ Input (dans le ts) du composant fils-->
+    <p>un beau paragraphe</p>
+</app-tableau>
