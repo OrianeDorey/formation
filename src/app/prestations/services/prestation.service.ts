@@ -28,9 +28,9 @@ export class PrestationService {
     console.log(item.state);
   }
 
-  // add item in collection
-
-  // update item in collection
+  public add(item: Prestation) {
+    this.collection.push(new Prestation(item));
+  }
 
   // delete item in collection
 

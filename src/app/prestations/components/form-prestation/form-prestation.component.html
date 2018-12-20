@@ -1,0 +1,35 @@
+<div class="container">
+    <form [formGroup]="form" novalidate (ngSubmit)="onSubmit()"> <!--novalidate permet de désactiver les validations par défaut du navigateur-->
+        <div class="form-group">
+          <label for="type">Type</label>
+          <input type="text" class="form-control" id="type" formControlName="typePresta">
+        </div>
+        <div class="form-group">
+          <label for="client">client</label>
+          <input type="text" class="form-control" id="client" formControlName="client">
+        </div>
+        <div class="form-group">
+          <label for="nbjours">nbjours</label>
+          <input type="number" class="form-control" id="nbjours" formControlName="nbJours">
+        </div>
+        <div class="form-group">
+          <label for="tjmht">tjmht</label>
+          <input type="number" class="form-control" id="tjmht" formControlName="tjmHt">
+        </div>
+        <div class="form-group">
+          <label for="tva">tva</label>
+          <input type="number" class="form-control" id="tva" formControlName="tauxTva">
+        </div>
+        <div class="form-group">
+          <label for="state">state</label>
+          <select type="number" class="form-control" id="state" formControlName="state">
+            <option *ngFor="let state of states | keyvalue" [value]="state.value">{{ state.value }}</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="comment">comment</label>
+          <textarea class="form-control" id="comment" formControlName="comment">{{ form.get('comment').value }}</textarea>
+        </div>
+        <button [disabled]="form.invalid" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

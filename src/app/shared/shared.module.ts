@@ -7,12 +7,13 @@ import { AddRowComponent } from './components/add-row/add-row.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { RouterModule } from '@angular/router';
 import { TemplateModule } from '../template/template.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [TotalPipe, StateDirective, TableauComponent, AddRowComponent],
-  exports: [TotalPipe, StateDirective, TableauComponent, AddRowComponent, TemplateModule],
+  exports: [TotalPipe, StateDirective, TableauComponent, AddRowComponent, TemplateModule, ReactiveFormsModule],
   imports: [
-    CommonModule, FontAwesomeModule, RouterModule, TemplateModule
+    CommonModule, FontAwesomeModule, RouterModule, TemplateModule, ReactiveFormsModule
   ]
 })
 export class SharedModule { }

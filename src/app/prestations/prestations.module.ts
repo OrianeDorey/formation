@@ -7,13 +7,16 @@ import { AddPrestationComponent } from './containers/add-prestation/add-prestati
 import { PageAddPrestationComponent } from './pages/page-add-prestation/page-add-prestation.component';
 import { PagePrestationsComponent } from './pages/page-prestations/page-prestations.component';
 import { PrestationsRoutingModule } from './prestations-routing.module';
+import { FormPrestationComponent } from './components/form-prestation/form-prestation.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [PagePrestationsComponent,
     ListPrestationsComponent,
     ItemPrestationComponent,
     PageAddPrestationComponent,
-    AddPrestationComponent],
+    AddPrestationComponent,
+    FormPrestationComponent],
   imports: [
     CommonModule, PrestationsRoutingModule, SharedModule
   ]
