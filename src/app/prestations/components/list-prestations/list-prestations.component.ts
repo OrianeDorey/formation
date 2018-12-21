@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { PrestationService } from '../../services/prestation.service';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Prestation } from 'src/app/shared/models/prestation.model';
+import { PrestationService } from '../../services/prestation.service';
 
 
 @Component({
@@ -8,11 +9,12 @@ import { Prestation } from 'src/app/shared/models/prestation.model';
   templateUrl: './list-prestations.component.html',
   styleUrls: ['./list-prestations.component.scss']
 })
-export class ListPrestationsComponent implements OnInit {
+export class ListPrestationsComponent implements OnInit, OnDestroy {
 
-  public collection: Prestation[];
+  public collection$: Observable<Prestation[]>; // convention de nommage des observable :finir par $
   public headers: string[];
   public texte = 'Ajouter une prestation';
+  // private sub: Subscription;
 
 
   constructor(
@@ -20,10 +22,15 @@ export class ListPrestationsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.collection = this.ps.collection; // copie par référence
-    this.headers = [ 'type', 'client', 'nb jours', 'tjmHt', 'total ht', 'total ttc', 'state' ];
+    // this.sub = this.ps.collection.subscribe((data) => {
+    //   this.collection = data;
+    // });
+    this.collection$ = this.ps.collection$;
+    this.headers = [ 'type', 'client', 'nb jours', 'tjmHt', 'total ht', 'total ttc', 'state', 'delete' ];
 
   }
 
-
+  ngOnDestroy() {
+    // this.sub.unsubscribe();
+  }
 }

@@ -20,8 +20,13 @@ export class AddPrestationComponent implements OnInit {
   }
 
   public add(item: Prestation) {
-    this.ps.add(item);
-    this.router.navigate(['../'], {relativeTo: this.route});
+    this.ps.add(item).then(() =>
+      this.router.navigate(['../'], {relativeTo: this.route}) // .then permet d'attendre la réponse avant de réaliser la redirection
+    );
+    //avec un endpoint http
+    // this.ps.add(item).subscribe((data) =>
+    //   this.router.navigate(['../'], {relativeTo: this.route})
+    // );
   }
 
 }

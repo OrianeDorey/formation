@@ -11,7 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [TotalPipe, StateDirective, TableauComponent, AddRowComponent],
-  exports: [TotalPipe, StateDirective, TableauComponent, AddRowComponent, TemplateModule, ReactiveFormsModule],
+  exports: [TotalPipe, StateDirective, TableauComponent, AddRowComponent, TemplateModule, ReactiveFormsModule, FontAwesomeModule],
   imports: [
     CommonModule, FontAwesomeModule, RouterModule, TemplateModule, ReactiveFormsModule
   ]

@@ -6,4 +6,7 @@
         <option [selected]="item.state === state.value" *ngFor="let state of states | keyvalue" [value]="state.value">{{ state.value }}</option>
       </select>
     </td>
+    <td>
+        <fa-icon [icon]="faTrashAlt" (click)="onDelete(item)"></fa-icon>
+    </td>
   </tr>
