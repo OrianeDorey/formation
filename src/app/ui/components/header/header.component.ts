@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.title = 'World of Angular';
+    this.title = 'World of Angular!';
   }
 
 }

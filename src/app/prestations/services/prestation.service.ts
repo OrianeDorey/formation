@@ -23,7 +23,7 @@ export class PrestationService {
     this.collection$ = this.itemsCollection.valueChanges().pipe(
       // map(data =>  data.map( item => new Prestation(item))); //syntaxe raccourcie
       map((data) => { // mapper le flux de données retourné par l'observable : tableau d'objet json
-        this.presta$.next(new Prestation(data[0])); // récup de la première donnée du tableau pour affichage dans les details
+        this.presta$.next(data[0] ? new Prestation(data[0]) : null); // récup de la première donnée du tableau pour
         return data.map((item) => { // Récupération de tous les items du tableau
           return new Prestation(item); // transformation de chaque item en objets de type prestation
         });

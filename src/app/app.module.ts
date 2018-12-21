@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginModule } from './login/login.module';
 import { UiModule } from './ui/ui.module';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 
 // the second parameter 'fr' is optional
@@ -28,7 +29,8 @@ registerLocaleData(localeFr, 'fr');
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    HttpClientModule
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [ { provide: LOCALE_ID, useValue: 'fr' }],
   bootstrap: [AppComponent]
